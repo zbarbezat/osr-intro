@@ -10,3 +10,5 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 Here's my attempt at putting an animated GIF in here:
 ![Alt Text](https://i.imgur.com/RcmK26f.gif)
+
+The YouTube video was unavailable, but the GIF worked!
