@@ -2,6 +2,10 @@
 ###This is also all written in Sublime Text 3
 ####I'm practicing good scientific software!
 
+
+
+
+
 Here's my attempt at putting a YouTube video in here:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=watch?v=LnOzMj7v-64
@@ -12,3 +16,4 @@ Here's my attempt at putting an animated GIF in here:
 ![Alt Text](https://i.imgur.com/RcmK26f.gif)
 
 The YouTube video was unavailable, but the GIF worked!
+

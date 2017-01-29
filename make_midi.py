@@ -10,7 +10,7 @@ def rando_midi(filename):
     cello_program = pretty_midi.instrument_name_to_program('Cello')
     cello = pretty_midi.Instrument(program=cello_program)
     # Iterate over note names, which will be converted to note number later
-    for note_name in ['C5', 'Eb5', 'G5', 'Bb5']:
+    for note_name in ['C5', 'E5', 'G5']:
         # Retrieve the MIDI note number for this note name
         note_number = pretty_midi.note_name_to_number(note_name)
         # Create a Note instance for this note, starting at 0s and ending at .5s
