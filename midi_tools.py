@@ -40,15 +40,21 @@ def compute_pitch_histogram(filename):
 	"""
 	midi = pretty_midi.PrettyMIDI(filename)
 	pitch_counts = {pc: 0 for pc in range(12)}
-
-	for inst in midi.instruments:
-		if inst.is_drum:
-			continue
-		for note in inst.notes:
-			pc = note.pitch % 12
-			pitch_counts[pc] += (note.end - note.start)
 	name = os.path.split(filename)[-1]
-	return {'name': name,
+	try:
+		midi = pretty_midi.PrettyMIDI(filename)
+		for inst in midi.instruments:
+			if inst.is_drum:
+				continue
+			for note in inst.notes:
+				pc = note.pitch % 12
+				pitch_counts[pc] += (note.end - note.start)
+
+	except IOError as derp:
+		print("woah buddy, {} died: {}".format(name, derp))
+
+	finally: 
+		return {'name': name,
 			'pitches': pitch_counts}
 
 def process_many(filenames, n_jobs=-2, verbose=0):
